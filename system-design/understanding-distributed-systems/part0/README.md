@@ -10,15 +10,14 @@
 
 ## Preface
 
-What is a distributed System?
-
+### What is a distributed System?
 
 A distributed system is a group of nodes (machines), communicating over some channel to accomplish a task.
 A **node** can refer to:
  - a physical machine, like a computer or phone
  - Or a software process, like a browser
 
-Why bother building distributed systems?
+### Why bother building distributed systems?
  * Some apps are inherently distributed - e.g. the web.
  * To achieve high availability and resiliency - if one node fails, the system doesn't crash.
  * To tackle data-intensive workloads which can't fit on a single machine.
@@ -26,8 +25,8 @@ Why bother building distributed systems?
 
 The book focuses on tackling the fundamental problems one faces when designing a distributed system.
 
-# What are some challenges or aspects of building distributed systems?
-## 1.1 Communication
+## What are some challenges or aspects of building distributed systems?
+## Communication
 First challenge is for nodes to communicate with each other over the network:
  * How are request/response messages represented on the wire?
  * What happens when there is a temporary network outage?
@@ -35,7 +34,7 @@ First challenge is for nodes to communicate with each other over the network:
 
 In practice, a nice network library can abstract away those details, but oftentimes abstractions leak and you need to know how the networks work under the hood.
 
-## 1.2 Coordination
+## Coordination
 Some form of coordination is required to make two nodes work together.
 
 Good metaphor - the [two generals problem](https://en.wikipedia.org/wiki/Two_Generals%27_Problem).
@@ -45,7 +44,7 @@ How to ensure they attack the city at the same time, despite the faulty communic
 
 Because coordination is such a key topic, the second part of the book is dedicated to understanding the fundamental distributed algorithms used to implement it.
 
-## 1.3 Scalability
+## Scalability
 The performance of an application represents how efficiently it can handle load. **Load** is anything that consumes the system’s (computer) resources such as Central Processing Unit (CPU), memory, and network bandwidth. 
 
 Ways to measure it depends on the app's use-case — number of concurrent users, number of reads/writes, requests per second (RPS), etc.
@@ -69,7 +68,7 @@ The alternative is to scale horizontally by adding more machines which work toge
 
 The rise of cloud providers has made procuring additional machines trivial. They include the ability to rent virtual machines. The number of cloud providers and cloud services has only grown, democratizing the ability to create scalable applications.
 
-## 1.4 Resiliency
+## Resiliency
 A distributed system is resilient if it doesn't crash even when failures happen.
 
 **At scale**, every **component** has a probability of failing — **nodes** can crash, **network links** can be severed, etc. The **failure** of one **component** can increase the probability that another one will fail if the **components** are not well isolated.
@@ -90,7 +89,7 @@ There are various techniques one can use to increase availability. All of them t
 
 A distributed system needs to embrace failures and be prepared to withstand them using techniques such as redundancy, fault isolation, and self-healing mechanisms, etc.
 
-## 1.5 Maintainability
+## Maintainability
 Most of the cost of software is spent after its initial development in maintenance activities (eg. fixing bugs, adding new features, operating it). 
 
 We should aspire to make our systems easy to modify, extend and operate so that they are easy to maintain.
@@ -103,7 +102,7 @@ Operators need to monitor the system’s health, investigate degradations and re
 
 Historically, developers, testers, and operators were part of different teams, but nowadays with the rise of microservices and DevOps, they’re on the same team.
 
-## 1.6 Anatomy of a distributed system
+## Anatomy of a distributed system
 From a hardware perspective, a distributed system is a set of machines communicating over network links.
 From a runtime perspective, it's a group of software processes which communicate via ***inter-process communication*** (IPC) mechanisms like **HTTP**. 
 
