@@ -1,4 +1,4 @@
-<img width="520" src="https://github.com/aleahabattle/booknotes/blob/master/system-design/understanding-distributed-systems/images/uds-cover.png" alt="UDS book cover">
+<img width="520" src="https://github.com/AleahaBattle/booknotes/blob/main/system-design/understanding-distributed-systems/images/uds-cover.png" alt="UDS book cover">
 
 # [Understanding Distributed Systems](https://www.goodreads.com/book/show/56977420-understanding-distributed-systems)
 Book notes taken while reading Understanding Distributed Systems.
